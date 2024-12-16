@@ -459,12 +459,12 @@ var app = (function() {
         // Set projection Matrix.
         switch (camera.projectionType) {
         case ("ortho"):
-            var v = camera.lrtb;
-            mat4.ortho(camera.pMatrix, -v, v, -v, v, -10, 100);
+            var v1 = camera.lrtb;
+            mat4.ortho(camera.pMatrix, -v1, v1, -v1, v1, -10, 100);
             break;
         case ("frustum"):
-            var v = camera.lrtb;
-            mat4.frustum(camera.pMatrix, -v / 2, v / 2, -v / 2, v / 2,
+            var v2 = camera.lrtb;
+            mat4.frustum(camera.pMatrix, -v2 / 2, v2 / 2, -v2 / 2, v2 / 2,
                     1, 10);
             break;
         case ("perspective"):
