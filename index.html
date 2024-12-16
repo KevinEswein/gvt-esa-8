@@ -88,6 +88,46 @@
 		<title>ESA 8</title>
 	</head>
 	<body onload="app.start()">
+	<div id="container">
 		<canvas id="canvas" width="500" height="500"></canvas>
+		<div id="documentation">
+			<h1>ESA 8 - Lichter auf einer Kreisbahn mit Toon Shading</h1>
+			<h3>Dokumentation</h3>
+			<div>X / Shift+X = Rotation des Modells um die X-Achse</div>
+			<div>Y / Shift+Y = Rotation des Modells um die Y-Achse</div>
+			<div>Z / Shift+Z = Rotation des Modells um die Z-Achse</div>
+			<div>S / Shift+S = Skalierung des Modells (Strecken/Quetschen)</div>
+			<div>O = Orthografische Projektion einstellen</div>
+			<div>F = Frustum-Projektion einstellen</div>
+			<div>P = Perspektivische Projektion einstellen</div>
+			<div>C / Shift+C = Kamera um das Zentrum drehen</div>
+			<div>H / Shift+H = Kamera vertikal bewegen</div>
+			<div>D / Shift+D = Kamera-Distanz zum Zentrum ändern</div>
+			<div>V / Shift+V = Öffnungswinkel der Kamera ändern</div>
+			<div>L = Lichter auf einer Kreisbahn bewegen</div>
+		</div>
+	</div>
 	</body>
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			background-color: beige;
+			display: flex;
+			justify-content: center;
+		}
+		#container {
+			display: flex;
+			margin-top: 40px;
+		}
+		#canvas {
+			border-radius: 50px;
+		}
+		#documentation {
+			margin-left: 50px;
+			max-width: 500px;
+			background-color: azure;
+			padding: 20px 50px 40px;
+			border-radius: 50px;
+		}
+	</style>
 </html>
