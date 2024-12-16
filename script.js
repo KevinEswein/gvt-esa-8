@@ -40,12 +40,19 @@ var app = (function() {
 
     // Objekt with light sources characteristics in the scene.
     var illumination = {
-        ambientLight : [ .5, .5, .5 ],
-        light : [ {
-            isOn : true,
-            position : [ 3., 1., 3. ],
-            color : [ 1., 1., 1. ]
-        }, ]
+        ambientLight: [0.5, 0.5, 0.5],
+        light: [
+            {
+                isOn: true,
+                position: [3.0, 1.0, 3.0],
+                color: [1.0, 1.0, 1.0]
+            },
+            {
+                isOn: true,
+                position: [-3.0, 1.0, -3.0],
+                color: [1.0, 1.0, 1.0]
+            }
+        ]
     };
 
     function start() {
@@ -292,8 +299,12 @@ var app = (function() {
     function moveLights() {
         lightAngle += lightSpeed;
         var radius = 3.0;
+
         illumination.light[0].position[0] = radius * Math.cos(lightAngle);
         illumination.light[0].position[2] = radius * Math.sin(lightAngle);
+
+        illumination.light[1].position[0] = radius * Math.cos(lightAngle + Math.PI);
+        illumination.light[1].position[2] = radius * Math.sin(lightAngle + Math.PI);
         render();
     }
     // END CODE
